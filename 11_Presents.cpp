@@ -6,14 +6,14 @@ int main(){
     cin.tie(NULL);
     int n;
     cin>>n;
-    vector<pair<int, int>> v;
+    int a[n];
     for(int i=0; i<n; i++){
-        int t; cin>>t;
-        v.push_back({t, i+1});
+        int t;cin>>t;
+        t--;
+        a[t] = i+1;
     }
-    sort(v.begin(), v.end());
     for(int i=0; i<n; i++){
-        cout<<v[i].second<<" ";
+        cout<<a[i]<<" ";
     }
     return 0;
 }
