@@ -9,9 +9,9 @@ int main(){
     while (t--){
         int a, b;
         cin>>a>>b;
-        sum = sum-a+b;
+        sum = sum - a + b;
         mx= max(sum, mx);
     }
-    cout<<sum<<endl;
+    cout<<mx<<endl;
     return 0;
 }
