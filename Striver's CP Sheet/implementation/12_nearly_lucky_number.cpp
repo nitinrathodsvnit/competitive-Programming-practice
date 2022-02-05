@@ -14,7 +14,7 @@ int32_t main(){
             c++;
         }
     }
-    if(c%7==0 or c%4==0){
+    if(c==4 or c==7){
         cout<<"YES";
     }
     else{
