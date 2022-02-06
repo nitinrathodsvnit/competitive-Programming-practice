@@ -1,23 +1,53 @@
 #include<bits/stdc++.h>
+
+#define int            long long int
+#define F              first
+#define S              second
+#define pb             push_back
+#define si             set <int>
+#define vi             vector <int>
+#define pii            pair <int, int>
+#define vpi            vector <pii>
+#define vpp            vector <pair<int, pii>>
+#define mii            map <int, int>
+#define mpi            map <pii, int>
+#define spi            set <pii>
+#define all(p)         p.begin(), p.end()
+#define que_max        priority_queue <int>
+#define que_min        priority_queue <int, vi, greater<int>>
+#define print(a)       for(auto x : a) cout << x << ' '; cout << endl
+#define print1(a)      for(auto x : a) cout << x.F << ' '  << x.S << endl
+#define print2(a,x,y)  for(int i = x; i < y; i++) cout<< a[i]<< ' '; cout << endl
+
 using namespace std;
 
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int n, c=1, m=0;
+const int N = 200005;
+
+void solve(){
+    int n;
     cin>>n;
-    int a[n];
-    cin>>a[0];
-    for(int i=1; i<n; i++){
-        cin>>a[i];
-        if(a[i]>a[i-1]){
-            c++;
-        }
-        else{
-            c=1;
-        }
-        m = max(m ,c);
+    vector<int> v;
+    v.reserve(n);
+    for(int i=0; i<n; i++){
+        int temp;
+        cin>>temp;
+        v.push_back(temp);
     }
-    cout<<m;
+    int c=1, ms= 1;
+    for(int i=0; i<n-1; i++){
+        if(v[i]<v[i+1]){
+            c++;
+            ms = max(ms, c);
+        }
+        else{c=1;}
+    }
+    cout<<ms;
+}
+
+int32_t main(){
+    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int t=1;
+    // cin>>t;
+    while (t--) solve();
     return 0;
 }
