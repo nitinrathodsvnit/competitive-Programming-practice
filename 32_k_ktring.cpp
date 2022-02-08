@@ -17,11 +17,16 @@ int main(){
         }
     }
 
+    int t = n;
     while (n--){
         for(int i=0; i<32; i++){
-            if(a[i]!=0){
-                cout<<char('a'+i);
+            int x = a[i]/t;
+            while (x--){
+                if(a[i]!=0){
+                    cout<<char('a'+i);
+                }  
             }
+            
         }
     }
 
