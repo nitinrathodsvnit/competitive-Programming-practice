@@ -26,14 +26,13 @@ const int N = 200005;
 void solve(){
     int n;
     cin>>n;
-    n*=2;
-    vector<int> v;
-    v.reserve(n);
-    for(int i=0; i<n; i++){
-        int temp; cin>>temp;
-        v.push_back(temp);
+    int s=2*n;
+    int a[s];
+    for(int i=0; i<s; i++){
+        cin>>a[i];
     }
-    
+    sort(a, a+s);
+    cout<<a[((s-1)/2) + 1] - a[(s-1)/2]<<endl;
 }
 
 int32_t main(){
