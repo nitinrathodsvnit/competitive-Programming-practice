@@ -18,10 +18,10 @@ int main(){
             }
         }
         for(int j=i; j>=0; j--){
-            cout<<j;
+            cout <<j;
             if(j!=0){
                 cout<<" ";
-            }
+            } 
         }
         cout<<endl;
     }

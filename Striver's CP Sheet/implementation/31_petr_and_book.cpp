@@ -10,7 +10,7 @@ int main(){
     for(int i=0;i<7; i++){
         cin>>a[i];
     }
-    int i=0;
+    int i=0; 
     while(n){
         i %= 7;
         n -= a[i];

@@ -24,7 +24,7 @@ int main(){
         else{
             if(temp%2){
                 cout<<-1;
-                return 0;
+                return 0; 
             }
             temp/=2;
             ans++; 
