@@ -27,33 +27,13 @@ const int N = 200005;
 void solve(){
     int a, b, c;
     cin>>a>>b>>c;
-    if(min(a, b, c)==b){
-        if((a+c)%b==0){
-            cout<<"YES"<<endl;
-        }
-        else{
-            cout<<"NO"<<endl;
-        }
-        return;
+    if(2*b==a+c or (a+c)%(2*b)==0 or ((2*b - c)%a==0 and (2*b - c)>0) or ((2*b - a)%c==0) and (2*b - a)>0){
+        cout<<"YES"<<endl;
     }
-    else if(min(a, b, c)==a){
-        if((b+c)%a==0 or (abs(b-c))%a==0){
-            cout<<"YES"<<endl;
-        }
-        else{
-            cout<<"NO"<<endl;
-        }
-        return;
+    else{
+        cout<<"NO"<<endl;
     }
-    else if(min(a, b, c)==c){
-        if((b+a)%c==0 or (abs(b-a))%c==0){
-            cout<<"YES"<<endl;
-        }
-        else{
-            cout<<"NO"<<endl;
-        }
-        return;
-    }
+    return;
 }
 
 int32_t main(){
