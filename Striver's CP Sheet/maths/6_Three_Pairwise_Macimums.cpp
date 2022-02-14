@@ -1,3 +1,16 @@
+// best apr
+// int t;
+// 	cin >> t;
+// 	while (t--) {
+// 		vector<int> a(3);
+// take input
+// 		sort(a.begin(), a.end());
+// 		if (a[1] != a[2]) {
+// 			cout << "NO" << endl;
+// 		} else {
+// 			cout << "YES" << endl << a[0] << " " << a[0] << " " << a[2] << endl;
+// 		}
+// 	}
 #include<bits/stdc++.h>
 
 #define int            long long int
@@ -52,3 +65,5 @@ int32_t main(){
     while (t--) solve();
     return 0;
 }
+
+
