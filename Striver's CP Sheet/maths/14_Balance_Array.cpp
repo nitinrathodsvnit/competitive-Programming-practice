@@ -32,13 +32,13 @@ void solve(){
     }
     else{
         cout<<"YES"<<endl;
-        for(int i=2; i<=n/2; i+=2){
-            cout<<i<<" ";
-            sum+=i;
+        for(int i=1; i<=n/2; i++){
+            cout<<i*2<<" ";
+            sum+=(i*2);
         }
-        for(int i=1; i<n/2; i+=2){
-            cout<<i<<" ";
-            sum-=i;
+        for(int i=1; i<n/2; i++){
+            cout<<2*i - 1<<" ";
+            sum-=(2*i - 1);
         }
         cout<<sum<<endl;
     }
