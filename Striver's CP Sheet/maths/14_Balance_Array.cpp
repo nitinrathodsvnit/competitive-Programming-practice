@@ -29,7 +29,7 @@ void solve(){
     cin>>n;
     if(n%4!=0){
         cout<<"NO"<<endl;
-    }
+    } 
     else{
         cout<<"YES"<<endl;
         for(int i=1; i<=n/2; i++){
