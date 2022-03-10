@@ -25,14 +25,20 @@ using namespace std;
 const int N = 200005;
 
 void solve(){
-    int a, b, n;
-    int ans = ((b/n)*n)-1;
-    if(ans>=1){
-        cout<<(max((b/n) + (b%a), (b/a)-1+a-1))<<"\n";
+    int hc, dc, hm, dm, c, w, a;
+    cin>>hc>>dc>>hm>>dm>>c>>w>>a;
+    for(int i=0; i<=c; i++){
+       int h = hc + a * i;
+		int d = dc + w * (c - i);
+		int cm = (hm + d - 1) / d;
+		int mc = (h + dm - 1) / dm;
+		if(cm <= mc){
+			print("YES");
+			return;
+		}
     }
-    else{
-        cout<<(b/n)+(b%n)<<"\n";
-    }
+    cout<<"NO"<<"\n";
+    return;
 }
 
 int32_t main(){
