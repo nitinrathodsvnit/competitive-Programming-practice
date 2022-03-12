@@ -27,7 +27,7 @@ const int N = 200005;
 void solve(){
     int n, m;
     cin>>n>>m;
-    int a[n][m];
+    char a[n][m];
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
             cin>>a[i][j];
@@ -35,19 +35,19 @@ void solve(){
     }
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
-            int ans=a[i][j];
-            if(a[i][j]){
-                if(i!=0){
-                    ans+=a[i-1][j];
+            int ans=0;
+            if(a[i][j]=='1'){
+                if(i!=0 and a[i-1][j]=='1'){
+                    ans++;
                 }
-                if(j!=0){
-                    ans+=a[i][j-1];
+                if(j!=0 and a[i][j-1]){
+                    ans++;
                 }
-                if(i!=n-1){
-                    ans+=a[i+1][j];
+                if(i!=n-1 and a[i+1][j]){
+                    ans++;
                 }
-                if(j!=m-1){
-                    ans+=a[i][j+1];
+                if(j!=m-1 and a[i][j+1]){
+                    ans++;
                 }
                 
                 if(ans>2){
