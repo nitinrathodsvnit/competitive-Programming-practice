@@ -24,35 +24,26 @@ using namespace std;
 
 const int N = 200005;
 
-
-
-
 void solve(){
-    string s;
-    cin>>s;
-    int ans = -1, sum = 0;
-    for(int i=1; i<(s.length()-1); i++){
-        if(s[i]==s[0] or s[i]==s[s.length()-1]){
-            sum=0;
-        }
-        else{
-            sum++;
-            ans = max(sum, ans);
-        }
+    int n; 
+    cin>>n;
+    int a[100]={0};
+    for(int i=0; i<n; i++){
+        int temp; 
+        cin>>temp;
+        a[temp-1]++;
     }
-    if(ans==0){
-        cout<<-1<<"\n";
+    int ans;
+    for(int i=0; i<100; i++){
+        ans+= (a[i]/2);
     }
-    else{
-        cout<<ans<<"\n";
-    }
-    return;
+    cout<<ans/2<<"\n";
 }
 
 int32_t main(){
     ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
     int t=1;
-    cin>>t;
+    // cin>>t;
     while (t--) solve();
     return 0;
 }

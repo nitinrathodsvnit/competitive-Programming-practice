@@ -25,27 +25,12 @@ using namespace std;
 const int N = 200005;
 
 
-
-
+// bkiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 void solve(){
     string s;
     cin>>s;
-    int ans = -1, sum = 0;
-    for(int i=1; i<(s.length()-1); i++){
-        if(s[i]==s[0] or s[i]==s[s.length()-1]){
-            sum=0;
-        }
-        else{
-            sum++;
-            ans = max(sum, ans);
-        }
-    }
-    if(ans==0){
-        cout<<-1<<"\n";
-    }
-    else{
-        cout<<ans<<"\n";
-    }
+    int n= s.length();
+    cout<<(n+1)/2<<"\n";
     return;
 }
 

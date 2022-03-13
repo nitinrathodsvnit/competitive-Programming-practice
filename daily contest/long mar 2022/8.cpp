@@ -22,46 +22,34 @@
 
 using namespace std;
 
-const int N = 200005;
-
-int getMod(string str, int n, int k)
-{
- 
-    // pwrTwo[i] will store ((2^i) % k)
-    int pwrTwo[n];
-    pwrTwo[0] = 1 % k;
-    for (int i = 1; i < n; i++)
-    {
-        pwrTwo[i] = pwrTwo[i - 1] * (2 % k);
-        pwrTwo[i] %= k;
-    }
- 
-    // To store the result
-    int res = 0;
-    int i = 0, j = n - 1;
-    while (i < n)
-    {
- 
-        // If current bit is 1
-        if (str[j] == '1')
-        {
- 
-            // Add the current power of 2
-            res += (pwrTwo[i]);
-            res %= k;
-        }
-        i++;
-        j--;
-    }
-    return res;
-}
+const int N = 998244353;
 
 void solve(){
     int n;
     cin>>n;
     string s;
     cin>>s;
-    cout<<getMod(s, n, 998244353)<<"\n";
+    int a[n]={0}, c=1, ans=0;
+    if(s[0]=='1'){
+        a[0]=1;
+    }
+    int arr=a[0];
+    for(int i=1; i<n; i++){
+        if(s[i]=='1'){
+            arr+=(i+1);
+        }
+        a[i]=arr;
+        a[i]=a[i]%2;
+    }
+    for(int i=n-1; i>=0; i--){
+        if(a[i]==1){
+            ans+=c;
+            ans=ans%N;
+        }
+        c=c*2;
+        c=c%N;
+    }
+    cout<<ans%N<<"\n";
     return;
 }
 
