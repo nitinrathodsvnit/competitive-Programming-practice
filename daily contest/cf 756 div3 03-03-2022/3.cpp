@@ -25,23 +25,19 @@ using namespace std;
 const int N = 200005;
 
 void solve(){
-    int n;
-    cin>>n; 
-    int a[n], mx = 0, sum=0;
-    for(int i=0; i<n; i++){
-        cin>>a[i];
-        sum+=a[i];
-        if(mx<a[i]){
-            mx =a[i];
-        }
-    }
-    sum-=mx;
-    if(mx-sum<2){
-        cout<<"YES\n";
-    }
-    else{
-        cout<<"NO\n";
-    }
+        int n;
+		cin >> n;
+		vector<int> a(n);
+		for(int i=0; i < n; ++i) cin >> a[i];
+		sort(a.begin(), a.end());
+		bool one = false;
+		bool consec = false;
+		for(int i=0; i < n; ++i) {
+			if(a[i] == 1) one = true;
+			if(i < n-1 && a[i]+1 == a[i+1]) consec = true;
+		}
+ 
+		cout << ((one && consec) ? "NO" : "YES") << endl;
 }
 
 int32_t main(){
