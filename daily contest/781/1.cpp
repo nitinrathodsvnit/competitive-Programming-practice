@@ -25,7 +25,19 @@ using namespace std;
 const int N = 200005;
 
 void solve(){
-    
+    int n; 
+    cin>>n;
+    n-=2;
+    if(n==2){
+        cout<<"1 1 1 1\n";
+        return;
+    }
+    if(n%2==0){
+        cout<<1<<" "<<n-1<<" 1 1"<<"\n";
+    }
+    else{
+        cout<<1<<" "<<n-1<<" 1 1\n";
+    }
 }
 
 int32_t main(){
