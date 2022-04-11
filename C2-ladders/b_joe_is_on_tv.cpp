@@ -27,14 +27,17 @@ const int N = 200005;
 void solve(){
     int n;
     cin>>n;
-
-    cout<<log10(n)<<setprecision(12)<<"\n";
+    double sum = 1;
+    for(int i=2; i<=n; i++){
+        sum = sum + (double)1/i;
+    }
+    cout<<fixed<<setprecision(12)<<sum<<"\n";
 }
 
 int32_t main(){
     ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
     int t=1;
-    cin>>t;
+    // cin>>t;
     while (t--) solve();
     return 0;
 }
