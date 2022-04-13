@@ -32,30 +32,18 @@ using namespace std;
 
 const int N = 200005;
 
-int sumofdigit(int n)
-{
-    int ans = 0;
-    while (n)
-    {
-        ans += (n % 10);
-        ans /= 10;
-    }
-    return ans;
-}
-
 void solve()
 {
-    int n;
-    cin >> n;
-    if (n & 1)
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    if (a > c or b > d)
     {
-        cout << sumofdigit(n / 2) + sumofdigit((n + 1) / 2);
+        cout << "IMPOSSIBLE\n";
     }
     else
     {
-        cout << sumofdigit(n / 2 - 1) + sumofdigit(n / 2 + 1);
+        cout << "POSSIBLE\n";
     }
-    cout << endl;
 }
 
 int32_t main()
