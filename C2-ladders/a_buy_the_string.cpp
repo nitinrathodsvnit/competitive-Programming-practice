@@ -34,7 +34,22 @@ const int N = 200005;
 
 void solve()
 {
-    int a;
+    int n, z, o, c, ans = 0;
+    cin >> n >> z >> o >> c;
+    string s;
+    cin >> s;
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] == '0')
+        {
+            ans += min(z, o + c);
+        }
+        else
+        {
+            ans += min(o, z + c);
+        }
+    }
+    cout << ans << "\n";
 }
 
 int32_t main()
