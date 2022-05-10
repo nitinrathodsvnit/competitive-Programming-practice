@@ -34,6 +34,24 @@ const int N = 200005;
 
 void solve()
 {
+    string s;
+    cin >> s;
+    int t1 = 0, t2 = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        int tm = s[i] - '0';
+        t1 += tm;
+        tm = s[5 - i] - '0';
+        t2 += tm;
+    }
+    if (t1 == t2)
+    {
+        cout << "YES\n";
+    }
+    else
+    {
+        cout << "NO\n";
+    }
 }
 
 int32_t main()
