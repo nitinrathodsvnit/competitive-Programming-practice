@@ -1,34 +1,23 @@
-#include <bits/stdc++.h>
+long long int n = nums.size();
+long long int prefix[100000];
+long long int sum = 0;
+long long int ans = 0;
 
-#define int long long int
-using namespace std;
-
-const int N = 200005;
-
-void solve()
+for (long long int i = 0; i < n; i++)
 {
-    int num, k;
-    cin >> num;
-    int ans = 0;
-    string s = to_string(num);
-    for (int i = 0; i < s.length() - k; i++)
+    sum += nums[i];
+}
+prefix[0] = nums[0];
+for (long long int i = 1; i < n; i++)
+{
+    prefix[i] = nums[i] + prefix[i - 1];
+}
+
+for (long long int i = 0; i < n - 1; i++)
+{
+    if (prefix[i] >= sum - prefix[i])
     {
-        int tm = stoi(s.substr(i, i + k));
-        if (num % tm == 0)
-        {
-            ans++;
-        }
+        ans++;
     }
-    return ans;
 }
-
-int32_t main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    int t = 1;
-    cin >> t;
-    o while (t--) solve();
-    return 0;
-}
+return ans;
