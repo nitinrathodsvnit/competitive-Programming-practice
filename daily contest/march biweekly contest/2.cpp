@@ -1,3 +1,4 @@
+/*
 long long int n = nums.size();
 long long int prefix[100000];
 long long int sum = 0;
@@ -20,4 +21,4 @@ for (long long int i = 0; i < n - 1; i++)
         ans++;
     }
 }
-return ans;
+return ans; */
