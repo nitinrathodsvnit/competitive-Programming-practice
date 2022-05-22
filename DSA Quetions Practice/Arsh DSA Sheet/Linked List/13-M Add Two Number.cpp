@@ -1,12 +1,7 @@
 /**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
+The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+New concept:
+take one dummy node (node* dummy = new node(); //null node) and then creat one temp node temp point to the dummy and then iterate temp node and return dummy->next
  */
 class Solution
 {
