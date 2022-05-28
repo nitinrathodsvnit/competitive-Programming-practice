@@ -38,7 +38,7 @@ public:
     }
 
     // Method to push an element
-    // x to stack2
+    // x to stack2   .
     void push2(int x)
     {
 
