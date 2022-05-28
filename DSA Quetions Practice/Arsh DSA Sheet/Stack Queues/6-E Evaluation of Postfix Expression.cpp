@@ -1,5 +1,5 @@
-// { Driver Code Starts
-// C++ program to evaluate value of a postfix expression
+// isdigit(exp[i])  --> a char is digit or  not check funtions
+//
 
 #include <bits/stdc++.h>
 using namespace std;
